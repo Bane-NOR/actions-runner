@@ -3,7 +3,7 @@
 
 # 01. Terraform
 echo "Installing Terraform..."
-curl https://releases.hashicorp.com/terraform/1.9.7/terraform_1.9.7_linux_amd64.zip -o terraform.zip && unzip terraform.zip && mv terraform /usr/local/bin/terraform && rm terraform.zip
+curl https://releases.hashicorp.com/terraform/1.9.7/terraform_1.9.7_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
 echo "Terraform installed successfully."
 
 # 02. Azure CLI
@@ -12,7 +12,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 echo "Azure CLI installed successfully."
 
 echo "Installing kubectl and kubelogin..."
-az aks install-cli
+sudo az aks install-cli
 echo "kubectl and kubelogin installed successfully."
 
 # 03. Various k8s tools
