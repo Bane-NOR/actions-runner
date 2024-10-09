@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Bane-NOR/actions-runner/compare/v1.0.1...v1.0.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* sudo broke the script ([1f49d36](https://github.com/Bane-NOR/actions-runner/commit/1f49d365770e04fad1ef561b308a867bc70f0d8c))
+
 ## [1.0.1](https://github.com/Bane-NOR/actions-runner/compare/v1.0.0...v1.0.1) (2024-10-09)
 
 
