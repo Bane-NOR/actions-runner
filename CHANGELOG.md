@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Bane-NOR/actions-runner/compare/v1.1.0...v1.1.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* temp removing bruno ([6667e5d](https://github.com/Bane-NOR/actions-runner/commit/6667e5deb6af94701949315af2e58971d838a0df))
+
 ## [1.1.0](https://github.com/Bane-NOR/actions-runner/compare/v1.0.2...v1.1.0) (2024-10-10)
 
 
