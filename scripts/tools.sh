@@ -28,14 +28,14 @@ echo "Installing trivy..."
 curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 echo "k8s tools installed successfully."
 
-# 04. Bruno
-echo "Installing Bruno..."
-sudo mkdir -p /etc/apt/keyrings 
-sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/bruno.gpg --keyserver keyserver.ubuntu.com --recv-keys 9FA6017ECABE0266
+# # 04. Bruno
+# echo "Installing Bruno..."
+# sudo mkdir -p /etc/apt/keyrings 
+# sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/bruno.gpg --keyserver keyserver.ubuntu.com --recv-keys 9FA6017ECABE0266
 
-echo "deb [signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" | sudo tee /etc/apt/sources.list.d/bruno.list
-sudo apt update
-sudo apt install bruno && echo "Bruno installed successfully."
+# echo "deb [signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" | sudo tee /etc/apt/sources.list.d/bruno.list
+# sudo apt update
+# sudo apt install bruno && echo "Bruno installed successfully."
 
 # 05. gh cli
 echo "Installing gh cli..."
