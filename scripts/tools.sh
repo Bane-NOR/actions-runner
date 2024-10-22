@@ -28,8 +28,7 @@ echo "Installing trivy..."
 curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 echo "k8s tools installed successfully."
 
-curl -fsSL https://deb.nodesource.com/setup_22.x
-sudo apt-get update
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 npx playwright install -y --with-deps
