@@ -28,6 +28,17 @@ echo "Installing trivy..."
 curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 echo "k8s tools installed successfully."
 
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -f npm
+npx playwright install --with-deps
+npm install -D @playwright/test
+npm i create-playwright --quiet --with-deps
+npm install -g @usebruno/cli
+npm install -g dotenv-cli
+npm install -D typescript
+npm install --save @types/node
+
 # # 04. Bruno
 # echo "Installing Bruno..."
 # sudo mkdir -p /etc/apt/keyrings 
