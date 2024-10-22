@@ -30,13 +30,13 @@ echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
 sudo apt-get install -y nodejs npm
-sudo npx playwright install --with-deps
-sudo npm install -D @playwright/test
-sudo npm i create-playwright --quiet --with-deps
-sudo npm install -g @usebruno/cli
-sudo npm install -g dotenv-cli
-sudo npm install -D typescript
-sudo npm install --save @types/node
+npx playwright install --with-deps
+npm install -D @playwright/test
+npm i create-playwright --quiet --with-deps
+npm install -g @usebruno/cli
+npm install -g dotenv-cli
+npm install -D typescript
+npm install --save @types/node
 
 # # 04. Bruno
 # echo "Installing Bruno..."
