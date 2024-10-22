@@ -30,9 +30,9 @@ echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x
 sudo apt-get update
-sudo apt-get install nodejs
-sudo apt-get install npm
-npx playwright install --with-deps
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+npx playwright install -y --with-deps
 npm install -D @playwright/test
 npm i create-playwright --quiet --with-deps
 npm install -g @usebruno/cli
