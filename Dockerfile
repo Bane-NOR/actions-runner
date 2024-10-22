@@ -5,7 +5,7 @@ RUN sudo chmod +x *.sh
 RUN ./tools.sh
 
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN sudo apt-get update && apt-get install -y --no-install-recommends \
     nodejs \
     npm \
     && rm -rf /var/lib/apt/lists/*
