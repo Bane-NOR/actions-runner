@@ -1,12 +1,12 @@
-name: Create and publish a container image
+name: Validate container build for release PR
 
 on:
-  release:
-    types: [published]
+  pull_request:
+    types: [opened,synchronize, edited]
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: 'bane-nor/actions-runner'
+  IMAGE_NAME: 'bane-nor/azure-pipelines-agent'
 
 jobs:
   build-and-push-image:
@@ -35,7 +35,7 @@ jobs:
       - name: Build and push container image
         uses: docker/build-push-action@v6.9.0
         with:
-          context: .
-          push: true
+          context: src/docker
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
