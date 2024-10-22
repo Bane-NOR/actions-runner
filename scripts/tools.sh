@@ -33,7 +33,7 @@ sudo apt-get install -y nodejs
 npx playwright install --with-deps
 npm install -D @playwright/test
 npm i create-playwright --quiet --with-deps
-sudo chmod -R 775 /usr/local/lib/node_modules/
+sudo chmod -R 775 /usr/lib/node_modules/
 npm install -g @usebruno/cli
 npm install -g dotenv-cli
 npm install -D typescript
