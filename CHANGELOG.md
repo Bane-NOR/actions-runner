@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.2.0](https://github.com/Bane-NOR/actions-runner/compare/v1.1.1...v1.2.0) (2024-10-23)
+
+
+### Features
+
+* add node and test dependencies to runners ([d73ca0e](https://github.com/Bane-NOR/actions-runner/commit/d73ca0e313a2273fd597d0c37548c2a6fa5f0167))
+
+
+### Bug Fixes
+
+* -f npm install ([85d3933](https://github.com/Bane-NOR/actions-runner/commit/85d39338cd780ce3376911da8d3639cc92ce1eb0))
+* add noninteractive ([abb43a8](https://github.com/Bane-NOR/actions-runner/commit/abb43a86c42c4285a69c7e7770e56f33f53adf17))
+* auto accept prompt ([23cc9ad](https://github.com/Bane-NOR/actions-runner/commit/23cc9ad97d8225e96c690ed86604539f4d44e4c9))
+* chmod test ([1cb4f23](https://github.com/Bane-NOR/actions-runner/commit/1cb4f2396c05a5319fce3b61c756c51003ca2d77))
+* chmod test ([1b28cc0](https://github.com/Bane-NOR/actions-runner/commit/1b28cc03d31fa1b3ffd38ce48f5bad3c82f8678e))
+* edit ([3c567be](https://github.com/Bane-NOR/actions-runner/commit/3c567be2ef299f738a4aef7bfc5e5bee565e6536))
+* npm --unsafe-perm ([9f458c1](https://github.com/Bane-NOR/actions-runner/commit/9f458c17fa0010d8e54f3662601ad7e48aa83254))
+* revert ([7069fc1](https://github.com/Bane-NOR/actions-runner/commit/7069fc1bba9b4b75f23595de9bafec7be54ea57c))
+* sudo ([52667c2](https://github.com/Bane-NOR/actions-runner/commit/52667c2aef506585b98ff5aa645164ba210d26e0))
+* test ([e61c2a0](https://github.com/Bane-NOR/actions-runner/commit/e61c2a0ab8dc80f0aeadd32505e1ca7a20227c71))
+* test ([5942c8e](https://github.com/Bane-NOR/actions-runner/commit/5942c8edef69b4cf5339afe772fb198ae2175a48))
+* test ([8016163](https://github.com/Bane-NOR/actions-runner/commit/80161632ab3f167a6e6ecc39f78e4e72563db85e))
+* test ([2771792](https://github.com/Bane-NOR/actions-runner/commit/27717920a9667f2ec727d97b6a3adeefd08e65fc))
+* test ([82d213b](https://github.com/Bane-NOR/actions-runner/commit/82d213b18dfc1a5aa04c1997b1a7d8ee2e2639eb))
+* test chown ([3833331](https://github.com/Bane-NOR/actions-runner/commit/3833331e202c93b379afc60eadd55171170f41f0))
+* test installing playwright and npm from dockerfile ([79a93c0](https://github.com/Bane-NOR/actions-runner/commit/79a93c06256c727ce9d81205799822433e99a00a))
+* test installing playwright and npm from dockerfile ([5bc0cb3](https://github.com/Bane-NOR/actions-runner/commit/5bc0cb37320a6277fc26effa1578642651814a20))
+* test unsafe ([4f15ff8](https://github.com/Bane-NOR/actions-runner/commit/4f15ff882bece6b3283e453030a016866992d3ec))
+* test with sudo ([fad789c](https://github.com/Bane-NOR/actions-runner/commit/fad789ca56d705309c207a567b4fd04d9aaf47b0))
+* test without npm install ([c9f1ae9](https://github.com/Bane-NOR/actions-runner/commit/c9f1ae93feff122d60e818d2933a7a3b1bda5b34))
+* test without sudo ([a43dcd7](https://github.com/Bane-NOR/actions-runner/commit/a43dcd766e7b6c379a6d207688d86c237d41a7b8))
+* testing with sudo ([25a3bc4](https://github.com/Bane-NOR/actions-runner/commit/25a3bc4c0a7ac6117c2868791647d7ebdc99edb4))
+* testing with sudo ([455c567](https://github.com/Bane-NOR/actions-runner/commit/455c5674c9931e35f80a2f543337779cef379972))
+* updated imagename and context ([0ff7b12](https://github.com/Bane-NOR/actions-runner/commit/0ff7b12ab72dacceeeb986fec80479ad183047c4))
+
 ## [1.1.1](https://github.com/Bane-NOR/actions-runner/compare/v1.1.0...v1.1.1) (2024-10-10)
 
 
