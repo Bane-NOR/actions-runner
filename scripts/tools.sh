@@ -29,7 +29,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-apt-get install -y nodejs
+sudo apt-get install -y nodejs
 npx playwright install --with-deps
 npm install -D @playwright/test
 npm i create-playwright --quiet --with-deps
