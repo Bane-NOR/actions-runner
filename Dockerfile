@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:2.320.0
+FROM ghcr.io/actions/actions-runner:2.321.0
 
 COPY  scripts/tools.sh ./tools.sh
 RUN sudo chmod +x *.sh

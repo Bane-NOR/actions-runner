@@ -39,13 +39,10 @@ npm install -D typescript
 npm install --save @types/node
 
 # # 04. Bruno
-# echo "Installing Bruno..."
-# sudo mkdir -p /etc/apt/keyrings 
-# sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/bruno.gpg --keyserver keyserver.ubuntu.com --recv-keys 9FA6017ECABE0266
-
-# echo "deb [signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" | sudo tee /etc/apt/sources.list.d/bruno.list
-# sudo apt update
-# sudo apt install bruno && echo "Bruno installed successfully."
+echo "Installing Bruno..."
+curl -sfL https://github.com/usebruno/bruno/releases/download/v1.33.0/bruno_1.33.0_amd64_linux.deb -o bruno.deb
+sudo apt install libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libsecret-1-0 -y
+sudo dpkg -i bruno.deb && rm bruno.deb && echo "Bruno installed successfully."
 
 # 05. gh cli
 echo "Installing gh cli..."
