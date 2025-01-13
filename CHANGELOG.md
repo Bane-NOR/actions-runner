@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Bane-NOR/actions-runner/compare/v1.2.0...v1.2.1) (2025-01-13)
+
+
+### Miscellaneous Chores
+
+* release 1.2.1 ([1435dc6](https://github.com/Bane-NOR/actions-runner/commit/1435dc62386d7c26d4a586c94ecedceb9152e5a5))
+
 ## [1.2.0](https://github.com/Bane-NOR/actions-runner/compare/v1.1.1...v1.2.0) (2024-10-23)
 
 
