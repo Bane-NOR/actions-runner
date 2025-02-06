@@ -3,15 +3,16 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: read-all
 
 name: Release Please
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lates
+    permissions:
+      contents: write
+      pull-requests: writes
     steps:
       - uses: googleapis/release-please-action@v4
         with:
