@@ -8,7 +8,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: 'bane-nor/actions-runner'
 
-permission:
+permissions:
   contents: read
 
 jobs:
