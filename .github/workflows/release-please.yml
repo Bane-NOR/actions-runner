@@ -9,7 +9,7 @@ name: Release Please
 
 jobs:
   release-please:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
