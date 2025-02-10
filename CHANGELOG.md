@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/Bane-NOR/actions-runner/compare/v1.2.1...v1.3.0) (2025-02-10)
+
+
+### Features
+
+* **build:** pinned release to sha ([fc1aac2](https://github.com/Bane-NOR/actions-runner/commit/fc1aac28b874d0b5242e7a1f5c6a2ecf5d75d65b))
+* **buildval:** set token permissions ([393f6a9](https://github.com/Bane-NOR/actions-runner/commit/393f6a96b2f23180cc64a8d8583f1646b82eb493))
+
+
+### Bug Fixes
+
+* **build:** added token permission ([c37733d](https://github.com/Bane-NOR/actions-runner/commit/c37733da578972acfd4e8458abf7dea52cf3ac4b))
+* **release:** wrong value in workflow ([a1d875b](https://github.com/Bane-NOR/actions-runner/commit/a1d875b99610269f8a1f9cc2aa60d3c2b9ef0c27))
+
 ## [1.2.1](https://github.com/Bane-NOR/actions-runner/compare/v1.2.0...v1.2.1) (2025-01-13)
 
 
