@@ -8,6 +8,8 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: 'bane-nor/actions-runner'
 
+permissions: read-all
+
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
