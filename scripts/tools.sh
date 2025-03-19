@@ -53,3 +53,11 @@ echo "Installing gh cli..."
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& sudo apt update \
 	&& sudo apt install gh -y && echo "gh cli installed successfully."
+
+# 06. ORAS
+VERSION="1.2.2"
+curl -LO "https://github.com/oras-project/oras/releases/download/v${VERSION}/oras_${VERSION}_linux_amd64.tar.gz"
+mkdir -p oras-install/
+tar -zxf oras_${VERSION}_*.tar.gz -C oras-install/
+sudo mv oras-install/oras /usr/local/bin/
+rm -rf oras_${VERSION}_*.tar.gz oras-install/
