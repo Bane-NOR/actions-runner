@@ -14,7 +14,13 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: googleapis/release-please-action@v4
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@v21cfef2b496dd8ef5b904c159339626a10ad380e # version 1.11.6
         with:
-          token: ${{ secrets.RELEASE_PLEASE }}
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - uses: googleapis/release-please-action@a02a34c4d625f9be7cb89156071d8567266a2445 # version 4.2.0
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
           release-type: simple
