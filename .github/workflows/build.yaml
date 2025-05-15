@@ -3,7 +3,9 @@ name: Create and publish a container image
 on:
   release:
     types: [published]
-
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: 'bane-nor/actions-runner'
