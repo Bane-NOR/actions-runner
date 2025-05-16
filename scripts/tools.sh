@@ -3,7 +3,7 @@
 
 # 01. Terraform
 echo "Installing Terraform..."
-curl https://releases.hashicorp.com/terraform/1.9.7/terraform_1.9.7_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
+curl https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
 echo "Terraform installed successfully."
 
 # 02. Azure CLI
@@ -40,7 +40,7 @@ npm install --save @types/node@22.13.9
 
 # # 04. Bruno
 echo "Installing Bruno..."
-curl -sfL https://github.com/usebruno/bruno/releases/download/v1.33.0/bruno_1.33.0_amd64_linux.deb -o bruno.deb
+curl -sfL https://github.com/usebruno/bruno/releases/download/v2.3.0/bruno_2.3.0_amd64_linux.deb -o bruno.deb
 sudo apt install libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libsecret-1-0 -y
 sudo dpkg -i bruno.deb && rm bruno.deb && echo "Bruno installed successfully."
 
