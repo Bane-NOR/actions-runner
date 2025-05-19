@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Bane-NOR/actions-runner/compare/v1.3.1...v1.4.0) (2025-05-19)
+
+
+### Features
+
+* Dataplattform packages ([5b92b4c](https://github.com/Bane-NOR/actions-runner/commit/5b92b4c8629e2463d20979e51faffd82981b65cc))
+
 ## [1.3.1](https://github.com/Bane-NOR/actions-runner/compare/v1.3.0...v1.3.1) (2025-05-19)
 
 
