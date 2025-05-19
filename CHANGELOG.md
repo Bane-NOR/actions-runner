@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/Bane-NOR/actions-runner/compare/v1.3.0...v1.3.1) (2025-05-19)
+
+
+### Bug Fixes
+
+* ensures scheduled builds to avoid lagging behind GHArc version ([c333371](https://github.com/Bane-NOR/actions-runner/commit/c333371785b663ad49f122d897e20eab0bf0b929))
+* run RP ([f768c37](https://github.com/Bane-NOR/actions-runner/commit/f768c37a9999dd0061bd515a1cd4e87ba29504d2))
+
 ## [1.3.0](https://github.com/Bane-NOR/actions-runner/compare/v1.2.1...v1.3.0) (2025-02-10)
 
 
@@ -90,4 +98,3 @@
 ### Features
 
 * initial container workflow ([7ad6c30](https://github.com/Bane-NOR/actions-runner/commit/7ad6c304d88f45bbcaf7d6f9d90bccf51f98589b))
-  
