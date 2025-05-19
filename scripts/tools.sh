@@ -3,7 +3,7 @@
 
 # 01. Terraform
 echo "Installing Terraform..."
-curl https://releases.hashicorp.com/terraform/1.9.7/terraform_1.9.7_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
+curl https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
 echo "Terraform installed successfully."
 
 # 02. Azure CLI
@@ -29,7 +29,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs python3.11 python3-pip python3-venv
 npx playwright install --with-deps
 npm install -D @playwright/test@1.50.1
 npm i create-playwright --quiet --with-deps
@@ -38,9 +38,15 @@ sudo npm install -g dotenv-cli@8.0.0
 npm install -D typescript@5.8.2
 npm install --save @types/node@22.13.9
 
+
+## Dataplatform tooling
+python3.11 -m pip install pipx==1.7.1
+pipx install uv==0.7.3
+curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/v0.250.0/install.sh | sh
+
 # # 04. Bruno
 echo "Installing Bruno..."
-curl -sfL https://github.com/usebruno/bruno/releases/download/v1.33.0/bruno_1.33.0_amd64_linux.deb -o bruno.deb
+curl -sfL https://github.com/usebruno/bruno/releases/download/v2.3.0/bruno_2.3.0_amd64_linux.deb -o bruno.deb
 sudo apt install libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libsecret-1-0 -y
 sudo dpkg -i bruno.deb && rm bruno.deb && echo "Bruno installed successfully."
 
