@@ -29,7 +29,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs python3.11 python3-pip python3-venv
 npx playwright install --with-deps
 npm install -D @playwright/test@1.50.1
 npm i create-playwright --quiet --with-deps
@@ -37,6 +37,12 @@ sudo npm install -g @usebruno/cli@1.39.0
 sudo npm install -g dotenv-cli@8.0.0
 npm install -D typescript@5.8.2
 npm install --save @types/node@22.13.9
+
+
+## Dataplatform tooling
+python3.11 -m pip install pipx==1.7.1
+pipx install uv==0.7.3
+curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/v0.250.0/install.sh | sh
 
 # # 04. Bruno
 echo "Installing Bruno..."
