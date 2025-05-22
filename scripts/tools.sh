@@ -29,7 +29,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-sudo apt-get install -y nodejs python3.11 python3-pip python3-venv
+sudo apt-get install -y nodejs python3.11 python3-pip python3-venv python3.11-venv
 npx playwright install --with-deps
 npm install -D @playwright/test@1.50.1
 npm i create-playwright --quiet --with-deps
