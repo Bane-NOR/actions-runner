@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Bane-NOR/actions-runner/compare/v1.4.0...v1.4.1) (2025-05-22)
+
+
+### Bug Fixes
+
+* correct packages and paths for databricks  ([a69148f](https://github.com/Bane-NOR/actions-runner/commit/a69148f5cfebe040d71bc87f506ce0bf2ce3c608))
+
 ## [1.4.0](https://github.com/Bane-NOR/actions-runner/compare/v1.3.1...v1.4.0) (2025-05-19)
 
 
