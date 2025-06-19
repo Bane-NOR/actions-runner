@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.2](https://github.com/Bane-NOR/actions-runner/compare/v1.4.1...v1.4.2) (2025-06-19)
+
+
+### Bug Fixes
+
+* adding cleanup of old untagged packages ([931fd9e](https://github.com/Bane-NOR/actions-runner/commit/931fd9ecbace5335f07ac17cf94e23982d840cc6))
+* updated name of build yml ([e712af3](https://github.com/Bane-NOR/actions-runner/commit/e712af30b61565a8b260af82c666046171144c86))
+
 ## [1.4.1](https://github.com/Bane-NOR/actions-runner/compare/v1.4.0...v1.4.1) (2025-05-22)
 
 
