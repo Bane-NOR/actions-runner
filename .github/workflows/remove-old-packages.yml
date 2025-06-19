@@ -1,0 +1,75 @@
+name: Delete Old Packages
+on:
+  workflow_run:
+    workflows: ["Container Build"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+jobs:
+  find-and-delete-old-packages:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Generate GitHub App token
+          id: generate-token
+          uses: actions/create-github-app-token@v1
+          with:
+            app-id: ${{ vars.GH_MGMT_APP_ID }}
+            private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+            owner: ${{ github.repository_owner }}
+
+        - name: Declare repository name
+          id: declare-repo
+          run: | 
+            FULL_REPO_NAME="${{ github.repository }}"
+            ORG_NAME="${{ github.repository_owner }}"
+            REPO_NAME=${FULL_REPO_NAME#"$ORG_NAME/"}
+            echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
+
+        - name: Find old packages
+          id: old-packages
+          env:
+            GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+            REPO_NAME: ${{ env.REPO_NAME }}
+          shell: pwsh
+          run: |
+            $DATE_90_DAYS_AGO = (Get-Date).AddDays(-90)
+            $headers = @{
+              "Accept" = "application/vnd.github+json"
+              "Authorization" = "Bearer $env:GH_TOKEN"
+              "X-GitHub-Api-Version" = "2022-11-28"
+            }
+            
+            # Get package versions
+            $response = Invoke-RestMethod -Uri "https://api.github.com/orgs/Bane-NOR/packages/container/$env:REPO_NAME/versions?per_page=100" -Headers $headers -FollowRelLink
+            $count = 0
+            foreach ($result in $response) {
+              foreach ($object in $result) {
+                if ($object.created_at -lt $DATE_90_DAYS_AGO) {
+                    $packageID += $object.id.ToString() + ','
+                    $count++
+                }
+              }
+            }
+            # Remove trailing comma from packageID
+            if ($count -gt 1) {
+              $packageID = $packageID.TrimEnd(',')
+            }
+            # Set environment variables for delete action
+            "PACKAGE_IDS=$packageID" | Out-File -FilePath $env:GITHUB_ENV -Append
+            "COUNT=$count" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        
+        - name: delete-package-action
+          if: steps.old-packages.outputs.COUNT > 1
+          uses: actions/delete-package-versions@v5
+          with:
+            package-type: container
+            package-name: ${{ env.REPO_NAME }}
+            package-version-ids: ${{ env.PACKAGE_IDS }}
+            delete-only-untagged-versions: true
