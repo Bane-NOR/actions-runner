@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/Bane-NOR/actions-runner/compare/v1.4.2...v1.4.3) (2025-10-17)
+
+
+### Bug Fixes
+
+* updated helm install ([0af4e28](https://github.com/Bane-NOR/actions-runner/commit/0af4e2847beef0cb14d39f941d6e2d2a5767a13d))
+
 ## [1.4.2](https://github.com/Bane-NOR/actions-runner/compare/v1.4.1...v1.4.2) (2025-08-04)
 
 
