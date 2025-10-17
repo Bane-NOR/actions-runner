@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install helm
 # 03.02. trivy
 echo "Installing trivy..."
-curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+sudo curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 echo "k8s tools installed successfully."
 
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
