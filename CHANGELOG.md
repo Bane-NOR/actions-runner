@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/Bane-NOR/actions-runner/compare/v1.4.3...v1.5.0) (2025-12-10)
+
+
+### Features
+
+* update versions of dataplatform tooling ([6dfc4d7](https://github.com/Bane-NOR/actions-runner/commit/6dfc4d762f908e1c1c8562e8aa3efa0235bf61f0))
+* update versions of dataplatform tooling ([fe30cc1](https://github.com/Bane-NOR/actions-runner/commit/fe30cc1fd14fdbcb69a2d3dec1ac07e6e2300a72))
+
+
+### Bug Fixes
+
+* Change trivy installation to use sudo for curl ([#28](https://github.com/Bane-NOR/actions-runner/issues/28)) ([bd2b64d](https://github.com/Bane-NOR/actions-runner/commit/bd2b64d4928b0a927390563732a616b1466bff55))
+
 ## [1.4.3](https://github.com/Bane-NOR/actions-runner/compare/v1.4.2...v1.4.3) (2025-10-17)
 
 
