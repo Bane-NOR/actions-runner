@@ -88,3 +88,15 @@ sudo mv /tmp/kustomize /usr/local/bin/kustomize
 rm -f /tmp/kustomize.tar.gz
 kustomize version
 echo "kustomize installed successfully."
+
+# 09. kubeconform
+echo "Installing kubeconform..."
+KUBECONFORM_VERSION="v0.7.0"
+curl -fsSL \
+  "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
+  -o /tmp/kubeconform.tar.gz
+tar -xzf /tmp/kubeconform.tar.gz -C /tmp
+sudo mv /tmp/kubeconform /usr/local/bin/kubeconform
+rm -f /tmp/kubeconform.tar.gz
+kubeconform -v
+echo "kubeconform installed successfully."
