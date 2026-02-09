@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.2](https://github.com/Bane-NOR/actions-runner/compare/v1.5.1...v1.5.2) (2026-02-09)
+
+
+### Bug Fixes
+
+* add kubeconform ([d9694e6](https://github.com/Bane-NOR/actions-runner/commit/d9694e6b844f3335104303029c3fa978bd19cb74))
+* add kubeconform ([8527974](https://github.com/Bane-NOR/actions-runner/commit/8527974c2175ad39d102e00ec02d46fcba66c4a0))
+
 ## [1.5.1](https://github.com/Bane-NOR/actions-runner/compare/v1.5.0...v1.5.1) (2026-02-09)
 
 
