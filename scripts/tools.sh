@@ -79,9 +79,12 @@ echo "yq installed successfully."
 
 # 08. kustomize
 echo "Installing kustomize..."
-KUSTOMIZE_VERSION="v5.4.2"
-curl -fsSL "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VERSION}/kustomize_linux_amd64.tar.gz" \
-  | tar -xz
-sudo mv kustomize /usr/local/bin/kustomize
+KUSTOMIZE_VERSION="5.4.2"
+curl -fsSL \
+  "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz" \
+  -o /tmp/kustomize.tar.gz
+tar -xzf /tmp/kustomize.tar.gz -C /tmp
+sudo mv /tmp/kustomize /usr/local/bin/kustomize
+rm -f /tmp/kustomize.tar.gz
 kustomize version
 echo "kustomize installed successfully."
