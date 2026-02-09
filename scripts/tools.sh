@@ -68,3 +68,20 @@ mkdir -p oras-install/
 tar -zxf oras_${VERSION}_*.tar.gz -C oras-install/
 sudo mv oras-install/oras /usr/local/bin/
 rm -rf oras_${VERSION}_*.tar.gz oras-install/
+
+# 07. yq
+echo "Installing yq..."
+YQ_VERSION="v4.44.3"
+sudo curl -fsSL "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq
+sudo chmod +x /usr/local/bin/yq
+yq --version
+echo "yq installed successfully."
+
+# 08. kustomize
+echo "Installing kustomize..."
+KUSTOMIZE_VERSION="v5.4.2"
+curl -fsSL "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VERSION}/kustomize_linux_amd64.tar.gz" \
+  | tar -xz
+sudo mv kustomize /usr/local/bin/kustomize
+kustomize version
+echo "kustomize installed successfully."
