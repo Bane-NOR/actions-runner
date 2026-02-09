@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.1](https://github.com/Bane-NOR/actions-runner/compare/v1.5.0...v1.5.1) (2026-02-09)
+
+
+### Bug Fixes
+
+* install kustomize ([b2dde5b](https://github.com/Bane-NOR/actions-runner/commit/b2dde5b722b90c3b697273829051e2e9c4fcc753))
+* install yq and kustomize ([21511db](https://github.com/Bane-NOR/actions-runner/commit/21511db7a3a756d1d526a1d8a7d54951ba9c8de5))
+* install yq and kustomize ([95fff38](https://github.com/Bane-NOR/actions-runner/commit/95fff38475d09ede2288fa6a84f204bce13a8c80))
+* update versions ([934f175](https://github.com/Bane-NOR/actions-runner/commit/934f1755e2d62267d2fbee8fd1af76ddb1b10b36))
+
 ## [1.5.0](https://github.com/Bane-NOR/actions-runner/compare/v1.4.3...v1.5.0) (2025-12-10)
 
 
