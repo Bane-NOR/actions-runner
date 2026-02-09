@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/Bane-NOR/actions-runner/compare/v1.5.2...v1.5.3) (2026-02-09)
+
+
+### Bug Fixes
+
+* readd python 3.11 after it seems to have been removed from defau… ([eac06e8](https://github.com/Bane-NOR/actions-runner/commit/eac06e8b775322ea82052df075e0c8541c97aac3))
+
 ## [1.5.2](https://github.com/Bane-NOR/actions-runner/compare/v1.5.1...v1.5.2) (2026-02-09)
 
 
