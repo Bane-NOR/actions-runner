@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.4](https://github.com/Bane-NOR/actions-runner/compare/v1.5.3...v1.5.4) (2026-02-11)
+
+
+### Bug Fixes
+
+* add gomplate ([312212f](https://github.com/Bane-NOR/actions-runner/commit/312212f4e9932d89be3b56691d3ef0acbf541004))
+* add gomplate ([b3ffe66](https://github.com/Bane-NOR/actions-runner/commit/b3ffe66f878e696b5aaa809639d2a3be9c22c135))
+
 ## [1.5.3](https://github.com/Bane-NOR/actions-runner/compare/v1.5.2...v1.5.3) (2026-02-09)
 
 
