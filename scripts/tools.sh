@@ -101,3 +101,14 @@ sudo mv /tmp/kubeconform /usr/local/bin/kubeconform
 rm -f /tmp/kubeconform.tar.gz
 kubeconform -v
 echo "kubeconform installed successfully."
+
+# 10. gomplate
+echo "Installing gomplate..."
+GOMPLATE_VERSION="v5.0.0"
+curl -fsSL \
+  "https://github.com/hairyhenderson/gomplate/releases/download/${GOMPLATE_VERSION}/gomplate_linux-amd64" \
+  -o /tmp/gomplate
+sudo chmod +x /tmp/gomplate
+sudo mv /tmp/gomplate /usr/local/bin/gomplate
+gomplate --version
+echo "gomplate installed successfully."
