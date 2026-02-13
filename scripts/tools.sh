@@ -18,7 +18,7 @@ echo "kubectl and kubelogin installed successfully."
 # 03. Various k8s tools
 # 03.01. helm
 echo "Installing helm..."
-sudo apt-get install curl gpg apt-transport-https --yes
+sudo apt-get install curl wget gpg apt-transport-https --yes
 curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
 echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 sudo apt-get update
@@ -112,3 +112,12 @@ sudo chmod +x /tmp/gomplate
 sudo mv /tmp/gomplate /usr/local/bin/gomplate
 gomplate --version
 echo "gomplate installed successfully."
+
+
+# 11. PowerShell
+# echo "Installing PowerShell..."
+PWSH_VERSION="7.5.4-1"
+wget https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell_${PWSH_VERSION}.deb_amd64.deb
+sudo dpkg -i powershell_${PWSH_VERSION}.deb_amd64.deb
+sudo apt-get install -f
+rm powershell_${PWSH_VERSION}.deb_amd64.deb
