@@ -118,6 +118,6 @@ echo "gomplate installed successfully."
 # echo "Installing PowerShell..."
 PWSH_VERSION="7.5.4"
 wget https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell_${PWSH_VERSION}-1.deb_amd64.deb
-sudo dpkg -i powershell_${PWSH_VERSION}.deb_amd64.deb
+sudo dpkg -i powershell_${PWSH_VERSION}-1.deb_amd64.deb
 sudo apt-get install -f
 rm powershell_${PWSH_VERSION}-1.deb_amd64.deb
