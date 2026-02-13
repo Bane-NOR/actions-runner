@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.0](https://github.com/Bane-NOR/actions-runner/compare/v1.5.4...v1.6.0) (2026-02-13)
+
+
+### Features
+
+* **pwsh:** initial installation ([970278a](https://github.com/Bane-NOR/actions-runner/commit/970278a1c7fcccf0f1b63f2ed215f3f1cff18035))
+
+
+### Bug Fixes
+
+* **pwsh:** correct naming pattern ([22cc61c](https://github.com/Bane-NOR/actions-runner/commit/22cc61cfeb586b7df3e810d5ea1a082c9eee2c48))
+* **pwsh:** missing trailing number in filename ([8c56905](https://github.com/Bane-NOR/actions-runner/commit/8c56905dff554be1763224adf4e640bbf60cd8d2))
+
 ## [1.5.4](https://github.com/Bane-NOR/actions-runner/compare/v1.5.3...v1.5.4) (2026-02-11)
 
 
