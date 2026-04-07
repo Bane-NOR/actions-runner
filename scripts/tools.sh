@@ -1,6 +1,9 @@
 #!/bin/bash
 # This script is used to install the tools required for the platform.
 
+# Fail script on any error
+set -euo pipefail
+
 # 01. Terraform
 echo "Installing Terraform..."
 curl https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/terraform && rm terraform.zip
