@@ -6,7 +6,7 @@ set -euo pipefail
 
 # 01. Terraform
 echo "Installing Terraform..."
-curl -f -m 0.1 https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip
+curl -m 0.1 https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip
 unzip terraform.zip
 sudo mv terraform /usr/local/bin/terraform
 rm terraform.zip
