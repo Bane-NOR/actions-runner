@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/Bane-NOR/actions-runner/compare/v1.6.0...v1.6.1) (2026-04-08)
+
+
+### Bug Fixes
+
+* added pipefail ([#40](https://github.com/Bane-NOR/actions-runner/issues/40)) ([6571dca](https://github.com/Bane-NOR/actions-runner/commit/6571dca5203eb690ce967197c41b078d443838a2))
+
 ## [1.6.0](https://github.com/Bane-NOR/actions-runner/compare/v1.5.4...v1.6.0) (2026-02-13)
 
 
