@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/Bane-NOR/actions-runner/compare/v1.6.1...v1.6.2) (2026-04-20)
+
+
+### Bug Fixes
+
+* upgrade databricks CLI due to checksum signature key expiry ([0e96a8b](https://github.com/Bane-NOR/actions-runner/commit/0e96a8b47492cfd4e8962fa7179492741c1c6b67))
+
 ## [1.6.1](https://github.com/Bane-NOR/actions-runner/compare/v1.6.0...v1.6.1) (2026-04-08)
 
 
