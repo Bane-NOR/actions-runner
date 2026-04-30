@@ -1,12 +1,24 @@
 #!/bin/bash
 # This script is used to install the tools required for the platform.
 
+# ---------------------------------------
+# Versions
+# ---------------------------------------
+TERRAFORM_VERSION="1.12.0"
+ORAS_VERSION="1.2.2"
+YQ_VERSION="4.52.2"
+KUSTOMIZE_VERSION="5.8.0"
+KUBECONFORM_VERSION="0.7.0"
+GOMPLATE_VERSION="5.0.0"
+PWSH_VERSION="7.5.4"
+FLUX_VERSION="2.8.6"
+
 # Fail script on any error
 set -euo pipefail
 
 # 01. Terraform
 echo "Installing Terraform..."
-curl https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd64.zip -o terraform.zip
+curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform.zip
 unzip terraform.zip
 sudo mv terraform /usr/local/bin/terraform
 rm terraform.zip
@@ -72,24 +84,21 @@ echo "gh cli installed successfully."
 
 # 06. ORAS
 echo "Installing oras..."
-VERSION="1.2.2"
-curl -LO "https://github.com/oras-project/oras/releases/download/v${VERSION}/oras_${VERSION}_linux_amd64.tar.gz"
+curl -LO "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz"
 mkdir -p oras-install/
-tar -zxf oras_${VERSION}_*.tar.gz -C oras-install/
+tar -zxf oras_${ORAS_VERSION}_*.tar.gz -C oras-install/
 sudo mv oras-install/oras /usr/local/bin/
-rm -rf oras_${VERSION}_*.tar.gz oras-install/
+rm -rf oras_${ORAS_VERSION}_*.tar.gz oras-install/
 
 # 07. yq
 echo "Installing yq..."
-YQ_VERSION="v4.52.2"
-sudo curl -fsSL "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq
+sudo curl -fsSL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq
 sudo chmod +x /usr/local/bin/yq
 yq --version
 echo "yq installed successfully."
 
 # 08. kustomize
 echo "Installing kustomize..."
-KUSTOMIZE_VERSION="5.8.0"
 curl -fsSL \
   "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz" \
   -o /tmp/kustomize.tar.gz
@@ -101,9 +110,8 @@ echo "kustomize installed successfully."
 
 # 09. kubeconform
 echo "Installing kubeconform..."
-KUBECONFORM_VERSION="v0.7.0"
 curl -fsSL \
-  "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
+  "https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
   -o /tmp/kubeconform.tar.gz
 tar -xzf /tmp/kubeconform.tar.gz -C /tmp
 sudo mv /tmp/kubeconform /usr/local/bin/kubeconform
@@ -113,9 +121,8 @@ echo "kubeconform installed successfully."
 
 # 10. gomplate
 echo "Installing gomplate..."
-GOMPLATE_VERSION="v5.0.0"
 curl -fsSL \
-  "https://github.com/hairyhenderson/gomplate/releases/download/${GOMPLATE_VERSION}/gomplate_linux-amd64" \
+  "https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64" \
   -o /tmp/gomplate
 sudo chmod +x /tmp/gomplate
 sudo mv /tmp/gomplate /usr/local/bin/gomplate
@@ -125,8 +132,17 @@ echo "gomplate installed successfully."
 
 # 11. PowerShell
 # echo "Installing PowerShell..."
-PWSH_VERSION="7.5.4"
 wget https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell_${PWSH_VERSION}-1.deb_amd64.deb
 sudo dpkg -i powershell_${PWSH_VERSION}-1.deb_amd64.deb
 sudo apt-get install -f
 rm powershell_${PWSH_VERSION}-1.deb_amd64.deb
+
+# 12. Flux Cli
+echo "Installing flux cli..."
+curl -fsSL \
+  "https://github.com/fluxcd/flux2/releases/download/v${FLUX_VERSION}/flux_${FLUX_VERSION}_linux_amd64.tar.gz" \
+  -o /tmp/flux.tar.gz
+tar -xzf /tmp/flux.tar.gz -C /tmp
+sudo mv /tmp/flux /usr/local/bin/flux
+rm -f /tmp/flux.tar.gz
+echo "flux cli installed successfully."
