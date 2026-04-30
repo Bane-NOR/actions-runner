@@ -140,7 +140,7 @@ rm powershell_${PWSH_VERSION}-1.deb_amd64.deb
 # 12. Flux Cli
 echo "Installing flux cli..."
 curl -fsSL \
-  "https://github.com/fluxcd/flux2/releases/download/v${VERSION_FLUX}/flux_${VERSION_FLUX}_linux_amd64.tar.gz" \
+  "https://github.com/fluxcd/flux2/releases/download/v${FLUX_VERSION}/flux_${FLUX_VERSION}_linux_amd64.tar.gz" \
   -o /tmp/flux.tar.gz
 tar -xzf /tmp/flux.tar.gz -C /tmp
 sudo mv /tmp/flux /usr/local/bin/flux
