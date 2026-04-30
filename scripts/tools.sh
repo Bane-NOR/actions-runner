@@ -111,7 +111,7 @@ echo "kustomize installed successfully."
 # 09. kubeconform
 echo "Installing kubeconform..."
 curl -fsSL \
-  "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
+  "https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
   -o /tmp/kubeconform.tar.gz
 tar -xzf /tmp/kubeconform.tar.gz -C /tmp
 sudo mv /tmp/kubeconform /usr/local/bin/kubeconform
@@ -122,7 +122,7 @@ echo "kubeconform installed successfully."
 # 10. gomplate
 echo "Installing gomplate..."
 curl -fsSL \
-  "https://github.com/hairyhenderson/gomplate/releases/download/${GOMPLATE_VERSION}/gomplate_linux-amd64" \
+  "https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64" \
   -o /tmp/gomplate
 sudo chmod +x /tmp/gomplate
 sudo mv /tmp/gomplate /usr/local/bin/gomplate
