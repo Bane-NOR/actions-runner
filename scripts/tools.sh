@@ -92,7 +92,7 @@ rm -rf oras_${ORAS_VERSION}_*.tar.gz oras-install/
 
 # 07. yq
 echo "Installing yq..."
-sudo curl -fsSL "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq
+sudo curl -fsSL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq
 sudo chmod +x /usr/local/bin/yq
 yq --version
 echo "yq installed successfully."
