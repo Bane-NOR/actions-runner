@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Bane-NOR/actions-runner/compare/v1.6.2...v1.7.0) (2026-04-30)
+
+
+### Features
+
+* Add flux install cli and versioning at the top ([19eba48](https://github.com/Bane-NOR/actions-runner/commit/19eba487a859fba17f40c87fb8e383363ddb4712))
+
 ## [1.6.2](https://github.com/Bane-NOR/actions-runner/compare/v1.6.1...v1.6.2) (2026-04-20)
 
 
