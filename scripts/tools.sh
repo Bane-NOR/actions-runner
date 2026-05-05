@@ -60,7 +60,7 @@ npm install --save @types/node@22.13.9
 
 ## Dataplatform tooling
 python3.11 -m pip install pipx==1.8.0
-pipx install uv==0.9.16
+pipx install uv==0.11.8
 curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/v0.297.2/install.sh | sudo sh
 
 # # 04. Bruno
