@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.1](https://github.com/Bane-NOR/actions-runner/compare/v1.7.0...v1.7.1) (2026-05-05)
+
+
+### Bug Fixes
+
+* bump uv 0.9.16 → 0.11.8 ([47b7c41](https://github.com/Bane-NOR/actions-runner/commit/47b7c41cee991434cbf9c0b25e0adf8902d44c51))
+* bump uv 0.9.16 → 0.11.8 ([4b9c963](https://github.com/Bane-NOR/actions-runner/commit/4b9c96304627e9c9702d2258f6c70465c2cf7b54))
+
 ## [1.7.0](https://github.com/Bane-NOR/actions-runner/compare/v1.6.2...v1.7.0) (2026-04-30)
 
 
