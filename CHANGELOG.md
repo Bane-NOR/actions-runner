@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/Bane-NOR/actions-runner/compare/v1.7.1...v1.8.0) (2026-08-05)
+
+
+### Features
+
+* Bump Flux. Add dyff. ([0d4ca4c](https://github.com/Bane-NOR/actions-runner/commit/0d4ca4c6fb4d2003cb0fa50c42213facd18ee639))
+
 ## [1.7.1](https://github.com/Bane-NOR/actions-runner/compare/v1.7.0...v1.7.1) (2026-05-05)
 
 
