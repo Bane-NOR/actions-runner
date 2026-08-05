@@ -11,7 +11,8 @@ KUSTOMIZE_VERSION="5.8.0"
 KUBECONFORM_VERSION="0.7.0"
 GOMPLATE_VERSION="5.0.0"
 PWSH_VERSION="7.5.4"
-FLUX_VERSION="2.8.6"
+FLUX_VERSION="2.9.3"
+DYFF_VERSION="1.12.0"
 
 # Fail script on any error
 set -euo pipefail
@@ -146,3 +147,13 @@ tar -xzf /tmp/flux.tar.gz -C /tmp
 sudo mv /tmp/flux /usr/local/bin/flux
 rm -f /tmp/flux.tar.gz
 echo "flux cli installed successfully."
+
+# 13. Dyff
+echo "Installing dyff..."
+curl -fsSL \
+  "https://github.com/homeport/dyff/releases/download/v${DYFF_VERSION}/dyff_${DYFF_VERSION}_linux_amd64.tar.gz" \
+  -o /tmp/dyff.tar.gz
+tar -xzf /tmp/dyff.tar.gz -C /tmp
+sudo mv /tmp/dyff /usr/local/bin/dyff
+rm -f /tmp/dyff.tar.gz
+echo "dyff installed successfully."
