@@ -13,6 +13,7 @@ GOMPLATE_VERSION="5.0.0"
 PWSH_VERSION="7.5.4"
 FLUX_VERSION="2.9.3"
 DYFF_VERSION="1.12.0"
+FLUX_OPERATOR_VERSION="0.58.0"
 
 # Fail script on any error
 set -euo pipefail
@@ -157,3 +158,14 @@ tar -xzf /tmp/dyff.tar.gz -C /tmp
 sudo mv /tmp/dyff /usr/local/bin/dyff
 rm -f /tmp/dyff.tar.gz
 echo "dyff installed successfully."
+
+# 14. Flux Operator CLI
+echo "Installing Flux Operator CLI..."
+curl -fsSL \
+  "https://github.com/controlplaneio-fluxcd/flux-operator/releases/download/v${FLUX_OPERATOR_VERSION}/flux-operator_${FLUX_OPERATOR_VERSION}_linux_amd64.tar.gz" \
+  -o /tmp/flux-operator.tar.gz
+tar -xzf /tmp/flux-operator.tar.gz -C /tmp flux-operator
+sudo install -m 0755 /tmp/flux-operator /usr/local/bin/flux-operator
+rm -f /tmp/flux-operator.tar.gz /tmp/flux-operator
+flux-operator version --client
+echo "Flux Operator CLI installed successfully."
