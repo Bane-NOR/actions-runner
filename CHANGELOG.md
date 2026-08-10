@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.1](https://github.com/Bane-NOR/actions-runner/compare/v1.8.0...v1.8.1) (2026-08-10)
+
+
+### Bug Fixes
+
+* added flux-operator-cli ([40514bc](https://github.com/Bane-NOR/actions-runner/commit/40514bca9f28b2670bdf5d48e3804ac806fbedc3))
+* added flux-operator-cli ([35317ef](https://github.com/Bane-NOR/actions-runner/commit/35317ef64b3731469d5e738c6314f30efb3edcc5))
+
 ## [1.8.0](https://github.com/Bane-NOR/actions-runner/compare/v1.7.1...v1.8.0) (2026-08-05)
 
 
