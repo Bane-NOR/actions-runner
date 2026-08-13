@@ -169,3 +169,11 @@ sudo install -m 0755 /tmp/flux-operator /usr/local/bin/flux-operator
 rm -f /tmp/flux-operator.tar.gz /tmp/flux-operator
 flux-operator version --client
 echo "Flux Operator CLI installed successfully."
+
+# 15. Git LFS
+echo "Installing Git LFS..."
+sudo apt-get update
+sudo apt-get install -y git-lfs
+sudo git lfs install --system
+git lfs version
+echo "Git LFS installed successfully."
