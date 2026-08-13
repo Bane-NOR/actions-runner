@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.2](https://github.com/Bane-NOR/actions-runner/compare/v1.8.1...v1.8.2) (2026-08-13)
+
+
+### Bug Fixes
+
+* install git-lfs ([4d6a2f8](https://github.com/Bane-NOR/actions-runner/commit/4d6a2f8b2fa3bed57e347eb2c506f99418ce3a4b))
+* install git-lfs ([2c17434](https://github.com/Bane-NOR/actions-runner/commit/2c174347d52671d2cfbb60b85016ae3037279044))
+
 ## [1.8.1](https://github.com/Bane-NOR/actions-runner/compare/v1.8.0...v1.8.1) (2026-08-10)
 
 
