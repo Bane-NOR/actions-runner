@@ -44,3 +44,43 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  open-bullet-platform-pr:
+    if: github.event_name == 'release'
+    needs: build-and-push-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate token for bullet-platform app
+        id: generate-token
+        uses: actions/create-github-app-token@21cfef2b496dd8ef5b904c159339626a10ad380e # version 1.11.6
+        with:
+          app-id: ${{ vars.BULLET_PLATFORM_APP_ID }}
+          private-key: ${{ secrets.BULLET_PLATFORM_PRIVATE_KEY }}
+          owner: bn-apps
+
+      - name: Checkout bullet-platform
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
+        with:
+          repository: bn-apps/bullet-platform
+          token: ${{ steps.generate-token.outputs.token }}
+
+      - name: Update runner image tag
+        env:
+          NEW_TAG: ${{ github.ref_name }}
+        run: |
+          sed -i "s|ghcr.io/bane-nor/actions-runner:.*|ghcr.io/bane-nor/actions-runner:${NEW_TAG}|" \
+            gitops/base/gha-runner-scale-set/release.yaml
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          branch: "feat/arc-runner-${{ github.ref_name }}"
+          commit-message: "chore: update arc-runner image to ${{ github.ref_name }}"
+          title: "chore: update arc-runner image to ${{ github.ref_name }}"
+          body: |
+            Automated PR to update the ARC runner image.
+
+            New version: `ghcr.io/bane-nor/actions-runner:${{ github.ref_name }}`
+            Release: ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}
+          base: main
