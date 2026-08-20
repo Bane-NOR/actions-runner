@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/Bane-NOR/actions-runner/compare/v1.8.2...v1.9.0) (2026-08-20)
+
+
+### Features
+
+* add job in container build to open pr in bullet-platform when a… ([#56](https://github.com/Bane-NOR/actions-runner/issues/56)) ([605e36b](https://github.com/Bane-NOR/actions-runner/commit/605e36b29a9aa757dd27000c013ff03bbab4a7af))
+
 ## [1.8.2](https://github.com/Bane-NOR/actions-runner/compare/v1.8.1...v1.8.2) (2026-08-13)
 
 
