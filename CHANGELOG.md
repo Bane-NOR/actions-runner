@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.1](https://github.com/Bane-NOR/actions-runner/compare/v1.9.0...v1.9.1) (2026-08-25)
+
+
+### Bug Fixes
+
+* update databricks cli ([dc0fa91](https://github.com/Bane-NOR/actions-runner/commit/dc0fa9175a62711cbc0ffc3292b5c6bb1d469a67))
+* update databricks cli ([24d6ef5](https://github.com/Bane-NOR/actions-runner/commit/24d6ef532b2cbc2fa52c788738bed45892e23df9))
+
 ## [1.9.0](https://github.com/Bane-NOR/actions-runner/compare/v1.8.2...v1.9.0) (2026-08-20)
 
 
