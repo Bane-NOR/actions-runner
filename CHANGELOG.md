@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/Bane-NOR/actions-runner/compare/v1.9.1...v1.10.0) (2026-10-22)
+
+
+### Features
+
+* Add velero to tools installed - [#60](https://github.com/Bane-NOR/actions-runner/issues/60) ([780e923](https://github.com/Bane-NOR/actions-runner/commit/780e923f09b6f7d7f0a17e412ee44bb05277d373))
+
 ## [1.9.1](https://github.com/Bane-NOR/actions-runner/compare/v1.9.0...v1.9.1) (2026-08-25)
 
 
