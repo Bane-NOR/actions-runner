@@ -171,7 +171,15 @@ rm -f /tmp/flux-operator.tar.gz /tmp/flux-operator
 flux-operator version --client
 echo "Flux Operator CLI installed successfully."
 
-# 15. Velero CLI
+# 15. Git LFS
+echo "Installing Git LFS..."
+sudo apt-get update
+sudo apt-get install -y git-lfs
+sudo git lfs install --system
+git lfs version
+echo "Git LFS installed successfully."
+
+# 16. Velero CLI
 echo "Installing Velero CLI..."
 curl -fsSL \
   "https://github.com/vmware-tanzu/velero/releases/download/v${VELERO_VERSION}/velero-v${VELERO_VERSION}-linux-amd64.tar.gz" \
@@ -181,11 +189,3 @@ sudo install -m 0755 "/tmp/velero-v${VELERO_VERSION}-linux-amd64/velero" /usr/lo
 rm -rf /tmp/velero.tar.gz "/tmp/velero-v${VELERO_VERSION}-linux-amd64"
 velero version --client-only
 echo "Velero CLI installed successfully."
-
-# 16. Git LFS
-echo "Installing Git LFS..."
-sudo apt-get update
-sudo apt-get install -y git-lfs
-sudo git lfs install --system
-git lfs version
-echo "Git LFS installed successfully."
